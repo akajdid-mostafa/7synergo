@@ -10,7 +10,7 @@ const SingleServiceSection = () => {
                 <div className="d-flex flex-column gspace-5">
                     <div className="image-container">
                         <img
-                        src="/assets/image/collaborative-process-of-multicultural-skilled-peo-5EHBQRG-1024x683.jpg"
+                        src="/assets/images/collaborative-process-of-multicultural-skilled-peo-5EHBQRG-1024x683.jpg"
                         alt="Service Image"
                         className="single-service-img"
                         />
@@ -53,7 +53,7 @@ const SingleServiceSection = () => {
                                     <div className="col">
                                         <div className="image-container">
                                         <img
-                                            src="/assets/image/young-business-team-working-EH8KQ2R-1024x683.jpg"
+                                            src="/assets/images/young-business-team-working-EH8KQ2R-1024x683.jpg"
                                             alt="Service Image"
                                             className="img-fluid"
                                         />
@@ -62,7 +62,7 @@ const SingleServiceSection = () => {
                                     <div className="col">
                                         <div className="image-container">
                                         <img
-                                            src="/assets/image/business-team-working-in-a-start-up-office-8ENVVX5-1024x683.jpg"
+                                            src="/assets/images/business-team-working-in-a-start-up-office-8ENVVX5-1024x683.jpg"
                                             alt="Service Image"
                                             className="img-fluid"
                                         />

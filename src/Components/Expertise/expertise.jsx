@@ -14,7 +14,7 @@ function ExpertiseSection(){
                         <div className="expertise-img-layout">
                             <div className="image-container expertise-img">
                                 <img
-                                    src="/assets/image/working-job-career-casual-showing-SJZWF3N-1024x737.jpg"
+                                    src="/assets/images/working-job-career-casual-showing-SJZWF3N-1024x737.jpg"
                                     alt="Expertise Image"
                                     className="img-fluid animate-box animated animate__animated"
                                     data-animate="animate__fadeInUp"

@@ -146,9 +146,9 @@ function BannerHomeSection() {
                                     </a>
                                     <div className="banner-reviewer">
                                         <div className="d-flex flex-row align-items-center">
-                                            <img src="/assets/image/Photo-14.jpg" alt="Reviewer" className="avatar" />
-                                            <img src="/assets/image/Photo-1.jpg" alt="Reviewer" className="avatar" />
-                                            <img src="/assets/image/Photo-2.jpg" alt="Reviewer" className="avatar" />
+                                            <img src="/assets/images/Photo-14.jpg" alt="Reviewer" className="avatar" />
+                                            <img src="/assets/images/Photo-1.jpg" alt="Reviewer" className="avatar" />
+                                            <img src="/assets/images/Photo-2.jpg" alt="Reviewer" className="avatar" />
                                         </div>
                                         <div className="detail">
                                             <span>2.7k Positive</span>

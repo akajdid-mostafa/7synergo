@@ -35,7 +35,7 @@ function ChooseUsSection(){
                             <p className="mb-0 animate-box animated animate__animated" data-animate="animate__fadeInDown">In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Marko, we don’t just create campaigns—we craft strategies that deliver measurable success.</p>
                         </div>
                         <div className="image-container">
-                            <img src="/assets/image/collaborative-process-of-multicultural-skilled-peo-5EHBQRG-1024x683.jpg" alt="Why Choose Us Image" className="chooseus-img" />
+                            <img src="/assets/images/collaborative-process-of-multicultural-skilled-peo-5EHBQRG-1024x683.jpg" alt="Why Choose Us Image" className="chooseus-img" />
                             <div className="card-chooseus-cta-layout">
                             <div className="chooseus-cta-spacer"></div>
                             <div className="d-flex flex-column align-items-end">

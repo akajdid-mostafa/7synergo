@@ -19,7 +19,7 @@ function Navbar() {
                     <div className="logo-container">
                         <NavLink className="navbar-brand" to="/">
                         <img
-                            src="/assets/image/marko-logo.png"
+                            src="/assets/images/marko-logo.png"
                             className="site-logo img-fluid"
                             alt="Logo"
                         />
