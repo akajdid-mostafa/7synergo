@@ -18,6 +18,7 @@ function ChooseUsSection(){
                                         title={item.title}
                                         content={item.content}
                                         link={item.link}
+                                        button={item.button}
                                     />
                                 ))}
                             </div>
@@ -28,10 +29,10 @@ function ChooseUsSection(){
                                     <div className="d-flex flex-column gspace-2">
                                         <div className="sub-heading">
                                             <i className="fa-regular fa-circle-dot"></i>
-                                            <span>Why Choose Marko</span>
+                                            <span>Notre Engagement</span>
                                         </div>
-                                        <h2 className="title-heading">Your Success is Our Mission</h2>
-                                        <p className="mb-0">In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Marko, we don’t just create campaigns—we craft strategies that deliver measurable success.</p>
+                                        <h2 className="title-heading">Votre Équilibre est Notre Mission</h2>
+                                        <p className="mb-0">Dans un monde en constante accélération, l'intégration du corps et de l'esprit est essentielle. Chez Synergo, nous ne faisons pas que des séances—nous bâtissons une résilience durable via une approche holistique.</p>
                                     </div>
                                 </AnimateOnScroll>
                                 <div className="image-container">
@@ -44,9 +45,9 @@ function ChooseUsSection(){
                                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
 
                                                     <div className="card card-chooseus-cta">
-                                                        <h5>Partner with Marko & take your brand to the next level.</h5>
+                                                        <h5>Contactez-nous pour un partenariat solide et durable.</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact">Let's Talk Strategy</a>
+                                                            <a href="./contact">Organiser une Séance d'Essai</a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>
                                                     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 
-const ChooseUsCard = ({icon, title, content, link, speed}) => {
+const ChooseUsCard = ({icon, title, content, link, speed, button}) => {
     
     return (
         <>
@@ -20,7 +20,7 @@ const ChooseUsCard = ({icon, title, content, link, speed}) => {
                         <h4 className="chooseus-title">{title}</h4>
                         <p>{content}</p>
                         <div className="link-wrapper">
-                            <a href={link}>Read More</a>
+                            <a href={link}>{button}</a>
                             <i className="fa-solid fa-arrow-circle-right accent-color"></i>
                         </div>
                     </div>
