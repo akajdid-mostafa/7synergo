@@ -24,7 +24,7 @@ function HomePage(){
             <ChooseUsSection />
             {/* <GuideBannerSection /> */}
             <ModalVideoSection />
-            <ServiceSection />
+            {/* <ServiceSection /> */}
             <CaseStudiesSection noPadding={true} />
             <TestimonialSection />
             <DigitalProcessSection />
