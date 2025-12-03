@@ -22,7 +22,7 @@ function HomePage(){
             <ExpertiseSection />
             <PartnershipSection />
             <ChooseUsSection />
-            <GuideBannerSection />
+            {/* <GuideBannerSection /> */}
             <ModalVideoSection />
             <ServiceSection />
             <CaseStudiesSection noPadding={true} />
