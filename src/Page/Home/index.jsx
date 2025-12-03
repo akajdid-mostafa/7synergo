@@ -30,7 +30,7 @@ function HomePage(){
             <DigitalProcessSection />
             <PricingPlanSection />
             <NewsletterSection />
-            <BlogSection />
+            {/* <BlogSection /> */}
         </>
     );
 }

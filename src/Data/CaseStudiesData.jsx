@@ -1,35 +1,60 @@
 export const caseStudiesData = [
-    {
-		id: 1,
-		title: "Local Business Digital Transformation",
-		description: "5x ROI on social media campaigns & 80% increase in engagement...",
-		tags: ["Social", "Influencer", "Retargeting", "Google", "Video", "Local", "Community"],
-		className: "local-business",
-		size: "large",
-    },
-    {
-		id: 2,
-		title: "SaaS Lead Generation Success",
-		description: "150% increase in qualified leads & 70% lower customer acquisition cost.",
-		tags: ["Content", "LinkedIn Ads", "Email", "Webinar", "Landing", "CRM", "Retargeting"],
-		className: "saas-leads",
-		size: "small",
-    },
-    {
-		id: 3,
-		title: "E-Commerce Growth Boost",
-		description: "3x increase in organic traffic & 2x revenue growth in 6 months...",
-		tags: ["SEO", "PPC Ads", "CRO", "Analytics", "Influencer", "A/B Testing", "Email"],
-		className: "ecommerce",
-		size: "small",
-    },
-    {
-		id: 4,
-		title: "Startup Brand Awareness Expansion",
-		description: "200% increase in brand mentions & 60% higher engagement rates...",
-		tags: ["Viral", "Partnership", "PR", "Growth", "UGC", "Media", "Branding"],
-		className: "startup-branding",
-		size: "large",
-    },
+  {
+    id: 1,
+    title: "Transformation Élèves (Primaire)",
+    description:
+      "5x amélioration du respect des règles et 80% d'augmentation de la maîtrise de soi.",
+    tags: [
+      "Discipline",
+      "Respect",
+      "Confiance",
+      "Énergie",
+      "Motricité",
+    ],
+    className: "local-business",
+    size: "large",
+	image: "/assets/images/history/history1.npg",
+  },
+  {
+    id: 2,
+    title: "Succès Récupération (Addiction)",
+    description:
+      "150% d'augmentation de l'Estime de Soi et 70% de réduction du stress lié au manque.",
+    tags: [
+      "Substitution Positive",
+      "Structure",
+      "Estime de Soi",
+      "Discipline",
+      "Objectifs",
+    ],
+    className: "saas-leads",
+    size: "small",
+	image: "/assets/images/history/history2.npg",
+  },
+  {
+    id: 3,
+    title: "Accélération Performance (Athlètes)",
+    description:
+      "3x augmentation de la concentration en compétition & 2x amélioration de la gestion de la pression.",
+    tags: [
+      "Préparation Mentale",
+      "Objectifs Clairs",
+      "Pression",
+      "Focus",
+      "Routines",
+    ],
+    className: "ecommerce",
+    size: "small",
+	image: "/assets/images/history/history3.npg",
+  },
+  {
+    id: 4,
+    title: "Expansion Résilience (Collège/Lycée)",
+    description:
+      "200% d'augmentation de l'Affirmation de Soi et 60% de meilleurs résultats aux examens (concentration).",
+    tags: ["Résilience", "Self-Défense", "Auto-Contrôle", "Persévérance", "Concentration"],
+    className: "startup-branding",
+    size: "large",
+	image: "/assets/images/history/history4.npg",
+  },
 ];
-  

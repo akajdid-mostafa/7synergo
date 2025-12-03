@@ -115,7 +115,7 @@ function BannerHomeSection() {
                 </h1>
               </AnimateOnScroll>
               <div className="banner-heading">
-                <AnimateOnScroll animation="fadeInUp" speed="normal">
+                {/* <AnimateOnScroll animation="fadeInUp" speed="normal">
                   <div className="banner-video-content order-lg-1 order-2">
                     <div className="d-flex flex-column flex-lg-row text-lg-start text-center align-items-center gspace-5">
                       <VideoButton videoUrl="https://www.youtube.com/watch?v=LAteUqIJBLY&pp=ygUPZml0bmVzcyBzZW5lcmd5?autoplay=1" />
@@ -125,7 +125,7 @@ function BannerHomeSection() {
                       </p>
                     </div>
                   </div>
-                </AnimateOnScroll>
+                </AnimateOnScroll> */}
 
                 <AnimateOnScroll animation="fadeInRight" speed="normal">
                   <div className="banner-content order-lg-2 order-1">

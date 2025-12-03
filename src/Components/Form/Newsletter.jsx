@@ -46,10 +46,9 @@ function NewsletterSection() {
                         <div className="d-flex flex-column gspace-5 position-relative z-2">
                             <AnimateOnScroll animation="fadeInLeft" speed="normal">
                                 <div className="d-flex flex-column gspace-2">
-                                    <h3 className="title-heading">Stay Ahead in Digital Marketing</h3>
+                                    <h3 className="title-heading">Gardez une Longueur d'Avance sur Votre Équilibre</h3>
                                     <p>
-                                        Get exclusive insights, trends, and strategies delivered straight to your inbox.
-                                        Subscribe now!
+                                    Recevez des conseils exclusifs, des stratégies de résilience et des outils pour l'équilibre Corps-Esprit. Abonnez-vous !
                                     </p>
                                 </div>
                             </AnimateOnScroll>
@@ -59,7 +58,7 @@ function NewsletterSection() {
                                     <span className="check-icon">
                                         <i className="fa-solid fa-2xl fa-check"></i>
                                     </span>
-                                    <p className="text-center">Thank you! Form submitted successfully.</p>
+                                    <p className="text-center">Merci ! Votre formulaire a été envoyé avec succès.</p>
                                 </div>
                             )}
 
@@ -84,7 +83,7 @@ function NewsletterSection() {
                                             type="email"
                                             name="newsletter-email"
                                             id="newsletter-email"
-                                            placeholder="Give your best email"
+                                            placeholder="Entrez votre meilleur email"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             className={error ? "error-border" : ""}
@@ -96,7 +95,7 @@ function NewsletterSection() {
                                     </div>
                                     <button className="btn btn-accent" type="submit">
                                         <span className="btn-title">
-                                            <span>Subscribe</span>
+                                            <span>S'abonner</span>
                                         </span>
                                         <span className="icon-circle">
                                             <i className="fa-solid fa-arrow-right"></i>
