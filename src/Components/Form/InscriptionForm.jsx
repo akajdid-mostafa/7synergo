@@ -307,90 +307,193 @@ const InscriptionForm = () => {
                 I. Informations Personnelles
               </h4>
               
-              <div className="row row-cols-md-2 row-cols-1 g-3">
+              <div className="row row-cols-md-2 row-cols-1 g-4">
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Nom et Prénom <span style={{ color: "var(--accent-color)" }}>*</span>
+                  </label>
                   <input
                     type="text"
                     name="nomPrenom"
-                    placeholder="Nom et Prénom *"
+                    placeholder="Ex: Jean Dupont"
                     value={formData.nomPrenom}
                     onChange={handleChange}
                     required
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
                 <div className="col">
-                  <input
-                    type="date"
-                    name="dateNaissance"
-                    placeholder="Date de Naissance *"
-                    value={formData.dateNaissance}
-                    onChange={handleChange}
-                    required
-                  />
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Date de Naissance <span style={{ color: "var(--accent-color)" }}>*</span>
+                  </label>
+                  <div className="date-input-wrapper" style={{ position: "relative" }}>
+                    <input
+                      type="date"
+                      name="dateNaissance"
+                      value={formData.dateNaissance}
+                      onChange={handleChange}
+                      onClick={(e) => {
+                        // Ouvrir automatiquement le calendrier
+                        if (e.target.showPicker) {
+                          e.target.showPicker();
+                        }
+                      }}
+                      onFocus={(e) => {
+                        // Ouvrir automatiquement le calendrier au focus
+                        if (e.target.showPicker) {
+                          e.target.showPicker();
+                        }
+                      }}
+                      required
+                      style={{ 
+                        marginBottom: "15px",
+                        cursor: "pointer"
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="row row-cols-md-2 row-cols-1 g-3">
+              <div className="row row-cols-md-2 row-cols-1 g-4">
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Adresse E-mail <span style={{ color: "var(--accent-color)" }}>*</span>
+                  </label>
                   <input
                     type="email"
                     name="email"
-                    placeholder="Adresse E-mail *"
+                    placeholder="Ex: jean.dupont@email.com"
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Téléphone <span style={{ color: "var(--accent-color)" }}>*</span>
+                  </label>
                   <input
                     type="tel"
                     name="telephone"
-                    placeholder="Téléphone *"
+                    placeholder="Ex: +33 6 12 34 56 78"
                     value={formData.telephone}
                     onChange={handleChange}
                     required
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
               </div>
 
-              <input
-                type="text"
-                name="profession"
-                placeholder="Profession"
-                value={formData.profession}
-                onChange={handleChange}
-              />
+              <div>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Profession
+                </label>
+                <input
+                  type="text"
+                  name="profession"
+                  placeholder="Ex: Ingénieur, Enseignant, Étudiant..."
+                  value={formData.profession}
+                  onChange={handleChange}
+                  style={{ marginBottom: "20px" }}
+                />
+              </div>
 
-              <h5 style={{ marginTop: "20px", marginBottom: "15px" }}>
+              <h5 style={{ 
+                marginTop: "30px", 
+                marginBottom: "20px",
+                color: "var(--primary)",
+                fontWeight: "600"
+              }}>
                 Personne à contacter en cas d'urgence
               </h5>
 
-              <div className="row row-cols-md-3 row-cols-1 g-3">
+              <div className="row row-cols-md-3 row-cols-1 g-4">
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Nom
+                  </label>
                   <input
                     type="text"
                     name="contactUrgenceNom"
-                    placeholder="Nom"
+                    placeholder="Ex: Marie Dupont"
                     value={formData.contactUrgenceNom}
                     onChange={handleChange}
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Lien (ex: Conjoint, Parent)
+                  </label>
                   <input
                     type="text"
                     name="contactUrgenceLien"
-                    placeholder="Lien (ex: Conjoint, Parent)"
+                    placeholder="Ex: Conjoint, Parent, Ami..."
                     value={formData.contactUrgenceLien}
                     onChange={handleChange}
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
                 <div className="col">
+                  <label style={{ 
+                    display: "block", 
+                    marginBottom: "10px", 
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
+                    Téléphone
+                  </label>
                   <input
                     type="tel"
                     name="contactUrgenceTel"
-                    placeholder="Téléphone"
+                    placeholder="Ex: +33 6 12 34 56 78"
                     value={formData.contactUrgenceTel}
                     onChange={handleChange}
+                    style={{ marginBottom: "15px" }}
                   />
                 </div>
               </div>
@@ -433,14 +536,24 @@ const InscriptionForm = () => {
                   </label>
                 </div>
                 {formData.autorisationMedicale === "oui" && (
-                  <textarea
-                    name="autorisationMedicaleDetails"
-                    placeholder="Détails (si Oui)"
-                    rows="3"
-                    value={formData.autorisationMedicaleDetails}
-                    onChange={handleChange}
-                    style={{ marginTop: "10px" }}
-                  />
+                  <div style={{ marginTop: "15px" }}>
+                    <label style={{ 
+                      display: "block", 
+                      marginBottom: "10px", 
+                      color: "var(--primary)",
+                      fontWeight: "500",
+                      fontSize: "15px"
+                    }}>
+                      Détails (si Oui)
+                    </label>
+                    <textarea
+                      name="autorisationMedicaleDetails"
+                      placeholder="Ex: Certificat médical daté du 15/01/2024, autorisation pour activités modérées..."
+                      rows="3"
+                      value={formData.autorisationMedicaleDetails}
+                      onChange={handleChange}
+                    />
+                  </div>
                 )}
               </div>
 
@@ -471,14 +584,24 @@ const InscriptionForm = () => {
                   </label>
                 </div>
                 {formData.problemesSante === "oui" && (
-                  <textarea
-                    name="problemesSanteDetails"
-                    placeholder="Détails (si Oui)"
-                    rows="3"
-                    value={formData.problemesSanteDetails}
-                    onChange={handleChange}
-                    style={{ marginTop: "10px" }}
-                  />
+                  <div style={{ marginTop: "15px" }}>
+                    <label style={{ 
+                      display: "block", 
+                      marginBottom: "10px", 
+                      color: "var(--primary)",
+                      fontWeight: "500",
+                      fontSize: "15px"
+                    }}>
+                      Détails (si Oui)
+                    </label>
+                    <textarea
+                      name="problemesSanteDetails"
+                      placeholder="Ex: Problèmes de dos, asthme, arthrose du genou..."
+                      rows="3"
+                      value={formData.problemesSanteDetails}
+                      onChange={handleChange}
+                    />
+                  </div>
                 )}
               </div>
 
@@ -509,14 +632,24 @@ const InscriptionForm = () => {
                   </label>
                 </div>
                 {formData.medicaments === "oui" && (
-                  <textarea
-                    name="medicamentsDetails"
-                    placeholder="Détails (si Oui)"
-                    rows="3"
-                    value={formData.medicamentsDetails}
-                    onChange={handleChange}
-                    style={{ marginTop: "10px" }}
-                  />
+                  <div style={{ marginTop: "15px" }}>
+                    <label style={{ 
+                      display: "block", 
+                      marginBottom: "10px", 
+                      color: "var(--primary)",
+                      fontWeight: "500",
+                      fontSize: "15px"
+                    }}>
+                      Détails (si Oui)
+                    </label>
+                    <textarea
+                      name="medicamentsDetails"
+                      placeholder="Ex: Médicaments pour la tension, anti-inflammatoires..."
+                      rows="3"
+                      value={formData.medicamentsDetails}
+                      onChange={handleChange}
+                    />
+                  </div>
                 )}
               </div>
 
@@ -547,14 +680,24 @@ const InscriptionForm = () => {
                   </label>
                 </div>
                 {formData.blessuresChroniques === "oui" && (
-                  <textarea
-                    name="blessuresChroniquesDetails"
-                    placeholder="Détails (si Oui)"
-                    rows="3"
-                    value={formData.blessuresChroniquesDetails}
-                    onChange={handleChange}
-                    style={{ marginTop: "10px" }}
-                  />
+                  <div style={{ marginTop: "15px" }}>
+                    <label style={{ 
+                      display: "block", 
+                      marginBottom: "10px", 
+                      color: "var(--primary)",
+                      fontWeight: "500",
+                      fontSize: "15px"
+                    }}>
+                      Détails (si Oui)
+                    </label>
+                    <textarea
+                      name="blessuresChroniquesDetails"
+                      placeholder="Ex: Douleur au genou droit, mal de dos chronique..."
+                      rows="3"
+                      value={formData.blessuresChroniquesDetails}
+                      onChange={handleChange}
+                    />
+                  </div>
                 )}
               </div>
 
@@ -585,14 +728,24 @@ const InscriptionForm = () => {
                   </label>
                 </div>
                 {formData.allergies === "oui" && (
-                  <textarea
-                    name="allergiesDetails"
-                    placeholder="Détails (si Oui)"
-                    rows="3"
-                    value={formData.allergiesDetails}
-                    onChange={handleChange}
-                    style={{ marginTop: "10px" }}
-                  />
+                  <div style={{ marginTop: "15px" }}>
+                    <label style={{ 
+                      display: "block", 
+                      marginBottom: "10px", 
+                      color: "var(--primary)",
+                      fontWeight: "500",
+                      fontSize: "15px"
+                    }}>
+                      Détails (si Oui)
+                    </label>
+                    <textarea
+                      name="allergiesDetails"
+                      placeholder="Ex: Allergie aux arachides, intolérance au lactose..."
+                      rows="3"
+                      value={formData.allergiesDetails}
+                      onChange={handleChange}
+                    />
+                  </div>
                 )}
               </div>
 
@@ -635,19 +788,56 @@ const InscriptionForm = () => {
               </div>
 
               <div className="form-group">
-                <label style={{ marginBottom: "10px", display: "block" }}>
-                  Votre niveau d'énergie général (sur une échelle de 1 à 10) : {formData.niveauEnergie}
+                <label style={{ marginBottom: "10px", display: "block", color: "var(--primary)", fontWeight: "500", fontSize: "15px" }}>
+                  Votre niveau d'énergie général (sur une échelle de 1 à 10) : <span style={{ color: "var(--accent-color)", fontWeight: "600" }}>{formData.niveauEnergie}</span>
                 </label>
-                <input
-                  type="range"
-                  name="niveauEnergie"
-                  min="1"
-                  max="10"
-                  value={formData.niveauEnergie}
-                  onChange={handleChange}
-                  style={{ width: "100%" }}
-                />
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--text-color)", marginTop: "5px" }}>
+                <div style={{ position: "relative", padding: "15px 0" }}>
+                  <input
+                    type="range"
+                    name="niveauEnergie"
+                    min="1"
+                    max="10"
+                    value={formData.niveauEnergie}
+                    onChange={handleChange}
+                    style={{ 
+                      width: "100%",
+                      background: `linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) ${((formData.niveauEnergie - 1) / 9) * 100}%, var(--accent-color-3) ${((formData.niveauEnergie - 1) / 9) * 100}%, var(--accent-color-3) 100%)`
+                    }}
+                  />
+                  {/* Points indicateurs */}
+                  <div style={{ 
+                    position: "absolute", 
+                    top: "50%", 
+                    left: 0, 
+                    right: 0, 
+                    height: "8px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    pointerEvents: "none",
+                    transform: "translateY(-50%)",
+                    marginTop: "15px"
+                  }}>
+                    {[...Array(10)].map((_, index) => {
+                      const value = index + 1;
+                      const isActive = value <= formData.niveauEnergie;
+                      return (
+                        <div
+                          key={index}
+                          style={{
+                            width: "8px",
+                            height: "8px",
+                            borderRadius: "50%",
+                            backgroundColor: isActive ? "var(--accent-color)" : "var(--accent-color-3)",
+                            boxShadow: isActive ? "0 0 4px rgba(161, 237, 2, 0.6)" : "none",
+                            transition: "all 0.2s ease"
+                          }}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--text-color)", marginTop: "10px" }}>
                   <span>1 (Très faible)</span>
                   <span>10 (Excellent)</span>
                 </div>
@@ -665,60 +855,111 @@ const InscriptionForm = () => {
               <h5 style={{ marginBottom: "15px" }}>A. Objectifs</h5>
 
               <div style={{ marginBottom: "20px" }}>
-                <label style={{ marginBottom: "10px", display: "block" }}>Objectif Principal *</label>
+                <label style={{ 
+                  marginBottom: "10px", 
+                  display: "block",
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Objectif Principal <span style={{ color: "var(--accent-color)" }}>*</span>
+                </label>
                 <textarea
                   name="objectifPrincipal"
-                  placeholder="Description détaillée (Ex: Perdre 5kg, courir 10km, tonifier les bras)"
+                  placeholder="Ex: Perdre 5kg, courir 10km, tonifier les bras"
                   rows="3"
                   value={formData.objectifPrincipal}
                   onChange={handleChange}
                   required
                 />
+                <label style={{ 
+                  display: "block", 
+                  marginTop: "15px",
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Délai souhaité
+                </label>
                 <input
                   type="text"
                   name="objectifPrincipalDelai"
-                  placeholder="Délai souhaité"
+                  placeholder="Ex: Dans 3 mois, Dans 6 mois..."
                   value={formData.objectifPrincipalDelai}
                   onChange={handleChange}
-                  style={{ marginTop: "10px" }}
                 />
               </div>
 
               <div style={{ marginBottom: "20px" }}>
-                <label style={{ marginBottom: "10px", display: "block" }}>Objectif Secondaire 1</label>
+                <label style={{ 
+                  marginBottom: "10px", 
+                  display: "block",
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Objectif Secondaire 1
+                </label>
                 <textarea
                   name="objectifSecondaire1"
-                  placeholder="Description détaillée"
+                  placeholder="Ex: Améliorer ma condition physique, gagner en souplesse..."
                   rows="3"
                   value={formData.objectifSecondaire1}
                   onChange={handleChange}
                 />
+                <label style={{ 
+                  display: "block", 
+                  marginTop: "15px",
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Délai souhaité
+                </label>
                 <input
                   type="text"
                   name="objectifSecondaire1Delai"
-                  placeholder="Délai souhaité"
+                  placeholder="Ex: Dans 3 mois, Dans 6 mois..."
                   value={formData.objectifSecondaire1Delai}
                   onChange={handleChange}
-                  style={{ marginTop: "10px" }}
                 />
               </div>
 
               <div style={{ marginBottom: "20px" }}>
-                <label style={{ marginBottom: "10px", display: "block" }}>Objectif Secondaire 2</label>
+                <label style={{ 
+                  marginBottom: "10px", 
+                  display: "block",
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Objectif Secondaire 2
+                </label>
                 <textarea
                   name="objectifSecondaire2"
-                  placeholder="Description détaillée"
+                  placeholder="Ex: Améliorer ma condition physique, gagner en souplesse..."
                   rows="3"
                   value={formData.objectifSecondaire2}
                   onChange={handleChange}
                 />
+                <label style={{ 
+                  display: "block", 
+                  marginTop: "15px",
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Délai souhaité
+                </label>
                 <input
                   type="text"
                   name="objectifSecondaire2Delai"
-                  placeholder="Délai souhaité"
+                  placeholder="Ex: Dans 3 mois, Dans 6 mois..."
                   value={formData.objectifSecondaire2Delai}
                   onChange={handleChange}
-                  style={{ marginTop: "10px" }}
                 />
               </div>
 
@@ -742,7 +983,13 @@ const InscriptionForm = () => {
                   </select>
                 </div>
                 <div className="col">
-                  <label style={{ marginBottom: "10px", display: "block" }}>
+                  <label style={{ 
+                    marginBottom: "10px", 
+                    display: "block",
+                    color: "var(--primary)",
+                    fontWeight: "500",
+                    fontSize: "15px"
+                  }}>
                     Fréquence sportive (par semaine)
                   </label>
                   <input
@@ -755,41 +1002,82 @@ const InscriptionForm = () => {
                 </div>
               </div>
 
-              <textarea
-                name="activitesPhysiques"
-                placeholder="Quelles activités physiques pratiquez-vous ?"
-                rows="3"
-                value={formData.activitesPhysiques}
-                onChange={handleChange}
-                style={{ marginTop: "20px" }}
-              />
+              <div style={{ marginBottom: "20px", marginTop: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Quelles activités physiques pratiquez-vous ?
+                </label>
+                <textarea
+                  name="activitesPhysiques"
+                  placeholder="Ex: Course à pied, natation, vélo, musculation..."
+                  rows="3"
+                  value={formData.activitesPhysiques}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <textarea
-                name="motivation"
-                placeholder="Qu'est-ce qui vous motive le plus à faire de l'exercice ?"
-                rows="3"
-                value={formData.motivation}
-                onChange={handleChange}
-                style={{ marginTop: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Qu'est-ce qui vous motive le plus à faire de l'exercice ?
+                </label>
+                <textarea
+                  name="motivation"
+                  placeholder="Ex: Me sentir mieux dans mon corps, améliorer ma santé, relever un défi..."
+                  rows="3"
+                  value={formData.motivation}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <textarea
-                name="obstacles"
-                placeholder="Qu'est-ce qui vous empêche le plus souvent de faire de l'exercice ?"
-                rows="3"
-                value={formData.obstacles}
-                onChange={handleChange}
-                style={{ marginTop: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Qu'est-ce qui vous empêche le plus souvent de faire de l'exercice ?
+                </label>
+                <textarea
+                  name="obstacles"
+                  placeholder="Ex: Manque de temps, fatigue, manque de motivation..."
+                  rows="3"
+                  value={formData.obstacles}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <h5 style={{ marginTop: "30px", marginBottom: "15px" }}>C. Habitudes Alimentaires</h5>
-              <textarea
-                name="habitudesAlimentaires"
-                placeholder="Décrivez brièvement une journée type de repas (Petit-déjeuner, Déjeuner, Dîner, Collations)"
-                rows="5"
-                value={formData.habitudesAlimentaires}
-                onChange={handleChange}
-              />
+              <h5 style={{ marginTop: "30px", marginBottom: "15px", color: "var(--primary)" }}>C. Habitudes Alimentaires</h5>
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Décrivez brièvement une journée type de repas (Petit-déjeuner, Déjeuner, Dîner, Collations)
+                </label>
+                <textarea
+                  name="habitudesAlimentaires"
+                  placeholder="Ex: Petit-déjeuner: café et croissant, Déjeuner: salade et protéines, Dîner: légumes et poisson..."
+                  rows="5"
+                  value={formData.habitudesAlimentaires}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
           )}
 
@@ -803,60 +1091,121 @@ const InscriptionForm = () => {
                 Cette section est cruciale pour l'approche synergique de 7Synergo.
               </p>
 
-              <textarea
-                name="attentesPsychologie"
-                placeholder="Qu'attendez-vous de l'intégration de la psychologie dans votre transformation physique ? *"
-                rows="4"
-                value={formData.attentesPsychologie}
-                onChange={handleChange}
-                required
-                style={{ marginBottom: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Qu'attendez-vous de l'intégration de la psychologie dans votre transformation physique ? <span style={{ color: "var(--accent-color)" }}>*</span>
+                </label>
+                <textarea
+                  name="attentesPsychologie"
+                  placeholder="Ex: Comprendre mes blocages mentaux, développer ma confiance en moi, gérer mon stress..."
+                  rows="4"
+                  value={formData.attentesPsychologie}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-              <textarea
-                name="relationCorps"
-                placeholder="Comment décririez-vous votre relation actuelle avec votre corps ?"
-                rows="4"
-                value={formData.relationCorps}
-                onChange={handleChange}
-                style={{ marginBottom: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Comment décririez-vous votre relation actuelle avec votre corps ?
+                </label>
+                <textarea
+                  name="relationCorps"
+                  placeholder="Ex: Je me sens à l'aise, je suis critique, je veux m'améliorer..."
+                  rows="4"
+                  value={formData.relationCorps}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <textarea
-                name="difficultesMotivation"
-                placeholder="Avez-vous déjà eu des difficultés à maintenir votre motivation sur le long terme ? Si oui, lesquelles ?"
-                rows="4"
-                value={formData.difficultesMotivation}
-                onChange={handleChange}
-                style={{ marginBottom: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Avez-vous déjà eu des difficultés à maintenir votre motivation sur le long terme ? Si oui, lesquelles ?
+                </label>
+                <textarea
+                  name="difficultesMotivation"
+                  placeholder="Ex: Perte de motivation après quelques semaines, manque de résultats visibles..."
+                  rows="4"
+                  value={formData.difficultesMotivation}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <textarea
-                name="facteurStress"
-                placeholder="Quel est votre principal facteur de stress dans la vie quotidienne ?"
-                rows="4"
-                value={formData.facteurStress}
-                onChange={handleChange}
-                style={{ marginBottom: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Quel est votre principal facteur de stress dans la vie quotidienne ?
+                </label>
+                <textarea
+                  name="facteurStress"
+                  placeholder="Ex: Le travail, la famille, les finances, la santé..."
+                  rows="4"
+                  value={formData.facteurStress}
+                  onChange={handleChange}
+                />
+              </div>
 
-              <textarea
-                name="pourquoiProfond"
-                placeholder="Quel est votre 'Pourquoi' profond pour cette transformation (au-delà de l'apparence physique) ? *"
-                rows="4"
-                value={formData.pourquoiProfond}
-                onChange={handleChange}
-                required
-                style={{ marginBottom: "20px" }}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Quel est votre 'Pourquoi' profond pour cette transformation (au-delà de l'apparence physique) ? <span style={{ color: "var(--accent-color)" }}>*</span>
+                </label>
+                <textarea
+                  name="pourquoiProfond"
+                  placeholder="Ex: Pour ma santé, pour mes enfants, pour me sentir mieux dans ma peau..."
+                  rows="4"
+                  value={formData.pourquoiProfond}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
 
-              <textarea
-                name="gestionEchec"
-                placeholder="Comment gérez-vous l'échec ou les revers ?"
-                rows="4"
-                value={formData.gestionEchec}
-                onChange={handleChange}
-              />
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "10px", 
+                  color: "var(--primary)",
+                  fontWeight: "500",
+                  fontSize: "15px"
+                }}>
+                  Comment gérez-vous l'échec ou les revers ?
+                </label>
+                <textarea
+                  name="gestionEchec"
+                  placeholder="Ex: Je me décourage facilement, je persévère, j'ai besoin de soutien..."
+                  rows="4"
+                  value={formData.gestionEchec}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
           )}
 
@@ -907,7 +1256,6 @@ const InscriptionForm = () => {
                   <label style={{ marginBottom: "10px", display: "block" }}>Signature du Client</label>
                   <input
                     type="text"
-                    placeholder="Votre nom complet"
                     value={formData.nomPrenom}
                     readOnly
                     style={{ opacity: 0.7 }}
@@ -929,7 +1277,7 @@ const InscriptionForm = () => {
                 type="button"
                 onClick={prevSection}
                 className="btn btn-secondary"
-                style={{ flex: "1" }}
+                style={{ width: "auto" }}
               >
                 <span className="btn-title">
                   <i className="fa-solid fa-arrow-left" style={{ marginRight: "8px" }}></i>
@@ -943,7 +1291,7 @@ const InscriptionForm = () => {
                 type="button"
                 onClick={nextSection}
                 className="btn btn-accent"
-                style={{ flex: currentSection === 1 ? "1" : "1", marginLeft: currentSection === 1 ? "0" : "auto" }}
+                style={{ width: "auto", marginLeft: currentSection === 1 ? "0" : "auto" }}
               >
                 <span className="btn-title">
                   <span>Suivant</span>
@@ -957,7 +1305,7 @@ const InscriptionForm = () => {
                 type="submit"
                 className="btn btn-accent"
                 disabled={isSubmitting}
-                style={{ flex: "1", marginLeft: "auto" }}
+                style={{ width: "auto", marginLeft: "auto" }}
               >
                 <span className="btn-title">
                   <span>{isSubmitting ? "Envoi en cours..." : "Envoyer le Formulaire"}</span>
