@@ -58,9 +58,73 @@ const InscriptionForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
+
+  // Fonctions de validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    // Accepte les formats: +33 6 12 34 56 78, 0612345678, 06 12 34 56 78, +33612345678, etc.
+    const phoneRegex = /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/;
+    // Vérifie qu'il y a au moins 8 chiffres
+    const digitsOnly = phone.replace(/\D/g, '');
+    return phoneRegex.test(phone) && digitsOnly.length >= 8 && digitsOnly.length <= 15;
+  };
+
+  const validateDate = (dateString) => {
+    if (!dateString) return false;
+    
+    const selectedDate = new Date(dateString);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Réinitialiser l'heure pour comparer seulement les dates
+    
+    // Vérifier que la date n'est pas dans le futur
+    if (selectedDate > today) {
+      return false;
+    }
+    
+    // Vérifier que la date n'est pas trop ancienne (par exemple, plus de 120 ans)
+    const minDate = new Date();
+    minDate.setFullYear(today.getFullYear() - 120);
+    
+    if (selectedDate < minDate) {
+      return false;
+    }
+    
+    return true;
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    
+    // Validation en temps réel
+    let error = "";
+    
+    if (name === "email" && value && !validateEmail(value)) {
+      error = "Format d'email invalide. Ex: exemple@email.com";
+    } else if (name === "telephone" && value && !validatePhone(value)) {
+      error = "Format de téléphone invalide. Ex: +33 6 12 34 56 78 ou 0612345678";
+    } else if (name === "contactUrgenceTel" && value && !validatePhone(value)) {
+      error = "Format de téléphone invalide. Ex: +33 6 12 34 56 78 ou 0612345678";
+    } else if (name === "dateNaissance" && value && !validateDate(value)) {
+      const selectedDate = new Date(value);
+      const today = new Date();
+      if (selectedDate > today) {
+        error = "La date de naissance ne peut pas être dans le futur";
+      } else {
+        error = "Date de naissance invalide";
+      }
+    }
+    
+    // Mettre à jour les erreurs de champ
+    setFieldErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
+
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
@@ -70,12 +134,41 @@ const InscriptionForm = () => {
   const validateSection = (section) => {
     switch (section) {
       case 1:
-        return (
-          formData.nomPrenom &&
-          formData.dateNaissance &&
-          formData.email &&
-          formData.telephone
-        );
+        // Vérifier que les champs sont remplis
+        if (!formData.nomPrenom || !formData.dateNaissance || !formData.email || !formData.telephone) {
+          return false;
+        }
+        // Vérifier la date de naissance
+        if (!validateDate(formData.dateNaissance)) {
+          const selectedDate = new Date(formData.dateNaissance);
+          const today = new Date();
+          if (selectedDate > today) {
+            setErrorMessage("La date de naissance ne peut pas être dans le futur");
+          } else {
+            setErrorMessage("Date de naissance invalide");
+          }
+          setTimeout(() => setErrorMessage(""), 3000);
+          return false;
+        }
+        // Vérifier le format de l'email
+        if (!validateEmail(formData.email)) {
+          setErrorMessage("Format d'email invalide. Ex: exemple@email.com");
+          setTimeout(() => setErrorMessage(""), 3000);
+          return false;
+        }
+        // Vérifier le format du téléphone
+        if (!validatePhone(formData.telephone)) {
+          setErrorMessage("Format de téléphone invalide. Ex: +33 6 12 34 56 78 ou 0612345678");
+          setTimeout(() => setErrorMessage(""), 3000);
+          return false;
+        }
+        // Vérifier le téléphone d'urgence si rempli
+        if (formData.contactUrgenceTel && !validatePhone(formData.contactUrgenceTel)) {
+          setErrorMessage("Format de téléphone d'urgence invalide. Ex: +33 6 12 34 56 78 ou 0612345678");
+          setTimeout(() => setErrorMessage(""), 3000);
+          return false;
+        }
+        return true;
       case 2:
         return formData.autorisationMedicale !== "";
       case 3:
@@ -91,9 +184,12 @@ const InscriptionForm = () => {
     if (validateSection(currentSection)) {
       setCurrentSection((prev) => Math.min(prev + 1, 5));
       window.scrollTo({ top: 0, behavior: "smooth" });
+      setErrorMessage(""); // Effacer les erreurs
     } else {
-      setErrorMessage("Veuillez remplir tous les champs obligatoires de cette section.");
-      setTimeout(() => setErrorMessage(""), 3000);
+      if (!errorMessage) {
+        setErrorMessage("Veuillez remplir tous les champs obligatoires de cette section.");
+        setTimeout(() => setErrorMessage(""), 3000);
+      }
     }
   };
 
@@ -104,6 +200,41 @@ const InscriptionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validation finale avant soumission
+    if (!validateDate(formData.dateNaissance)) {
+      const selectedDate = new Date(formData.dateNaissance);
+      const today = new Date();
+      if (selectedDate > today) {
+        setErrorMessage("La date de naissance ne peut pas être dans le futur. Veuillez corriger.");
+      } else {
+        setErrorMessage("Date de naissance invalide. Veuillez corriger.");
+      }
+      setTimeout(() => setErrorMessage(""), 3000);
+      setCurrentSection(1); // Retourner à la section 1
+      return;
+    }
+    
+    if (!validateEmail(formData.email)) {
+      setErrorMessage("Format d'email invalide. Veuillez corriger votre email.");
+      setTimeout(() => setErrorMessage(""), 3000);
+      setCurrentSection(1); // Retourner à la section 1
+      return;
+    }
+    
+    if (!validatePhone(formData.telephone)) {
+      setErrorMessage("Format de téléphone invalide. Veuillez corriger votre téléphone.");
+      setTimeout(() => setErrorMessage(""), 3000);
+      setCurrentSection(1); // Retourner à la section 1
+      return;
+    }
+    
+    if (formData.contactUrgenceTel && !validatePhone(formData.contactUrgenceTel)) {
+      setErrorMessage("Format de téléphone d'urgence invalide. Veuillez corriger.");
+      setTimeout(() => setErrorMessage(""), 3000);
+      setCurrentSection(1); // Retourner à la section 1
+      return;
+    }
     
     if (!formData.signature) {
       setErrorMessage("Veuillez accepter les conditions pour continuer.");
@@ -356,12 +487,25 @@ const InscriptionForm = () => {
                           e.target.showPicker();
                         }
                       }}
+                      max={new Date().toISOString().split('T')[0]} // Empêcher la sélection de dates futures
                       required
                       style={{ 
-                        marginBottom: "15px",
-                        cursor: "pointer"
+                        marginBottom: fieldErrors.dateNaissance ? "5px" : "15px",
+                        cursor: "pointer",
+                        borderColor: fieldErrors.dateNaissance ? "var(--error-color)" : "rgba(161, 237, 2, 0.2)"
                       }}
                     />
+                    {fieldErrors.dateNaissance && (
+                      <div style={{ 
+                        color: "var(--error-color)", 
+                        fontSize: "12px", 
+                        marginBottom: "15px",
+                        marginTop: "0",
+                        paddingLeft: "10px"
+                      }}>
+                        {fieldErrors.dateNaissance}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -384,8 +528,22 @@ const InscriptionForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    style={{ marginBottom: "15px" }}
+                    style={{ 
+                      marginBottom: fieldErrors.email ? "5px" : "15px",
+                      borderColor: fieldErrors.email ? "var(--error-color)" : "rgba(161, 237, 2, 0.2)"
+                    }}
                   />
+                  {fieldErrors.email && (
+                    <div style={{ 
+                      color: "var(--error-color)", 
+                      fontSize: "12px", 
+                      marginBottom: "15px",
+                      marginTop: "0",
+                      paddingLeft: "10px"
+                    }}>
+                      {fieldErrors.email}
+                    </div>
+                  )}
                 </div>
                 <div className="col">
                   <label style={{ 
@@ -404,8 +562,22 @@ const InscriptionForm = () => {
                     value={formData.telephone}
                     onChange={handleChange}
                     required
-                    style={{ marginBottom: "15px" }}
+                    style={{ 
+                      marginBottom: fieldErrors.telephone ? "5px" : "15px",
+                      borderColor: fieldErrors.telephone ? "var(--error-color)" : "rgba(161, 237, 2, 0.2)"
+                    }}
                   />
+                  {fieldErrors.telephone && (
+                    <div style={{ 
+                      color: "var(--error-color)", 
+                      fontSize: "12px", 
+                      marginBottom: "15px",
+                      marginTop: "0",
+                      paddingLeft: "10px"
+                    }}>
+                      {fieldErrors.telephone}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -493,8 +665,22 @@ const InscriptionForm = () => {
                     placeholder="Ex: +33 6 12 34 56 78"
                     value={formData.contactUrgenceTel}
                     onChange={handleChange}
-                    style={{ marginBottom: "15px" }}
+                    style={{ 
+                      marginBottom: fieldErrors.contactUrgenceTel ? "5px" : "15px",
+                      borderColor: fieldErrors.contactUrgenceTel ? "var(--error-color)" : "rgba(161, 237, 2, 0.2)"
+                    }}
                   />
+                  {fieldErrors.contactUrgenceTel && (
+                    <div style={{ 
+                      color: "var(--error-color)", 
+                      fontSize: "12px", 
+                      marginBottom: "15px",
+                      marginTop: "0",
+                      paddingLeft: "10px"
+                    }}>
+                      {fieldErrors.contactUrgenceTel}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
