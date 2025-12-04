@@ -4,10 +4,15 @@ export default function ThemeSwitcher() {
     const [lightMode, setLightMode] = useState(false);
 
     useEffect(() => {
-        const mode = localStorage.getItem('lightmode');
-        if (mode === 'active') {
-            setLightMode(true);
-            document.body.classList.add('lightmode');
+        try {
+            const mode = localStorage.getItem('lightmode');
+            if (mode === 'active') {
+                setLightMode(true);
+                document.body.classList.add('lightmode');
+            }
+        } catch (error) {
+            // localStorage non disponible (mode privé, restrictions, etc.)
+            console.warn('localStorage non disponible:', error);
         }
     }, []);
 
@@ -18,7 +23,11 @@ export default function ThemeSwitcher() {
     
             if (lightMode) {
                 document.body.classList.add('lightmode');
-                localStorage.setItem('lightmode', 'active');
+                try {
+                    localStorage.setItem('lightmode', 'active');
+                } catch (error) {
+                    console.warn('Impossible d\'enregistrer dans localStorage:', error);
+                }
     
                 siteLogos.forEach((logo) => {
                     logo.setAttribute('src', 'assets/images/logo/logo-dark.png');
@@ -32,7 +41,11 @@ export default function ThemeSwitcher() {
                 });
             } else {
                 document.body.classList.remove('lightmode');
-                localStorage.removeItem('lightmode');
+                try {
+                    localStorage.removeItem('lightmode');
+                } catch (error) {
+                    console.warn('Impossible d\'accéder à localStorage:', error);
+                }
     
                 siteLogos.forEach((logo) => {
                     logo.setAttribute('src', 'assets/images/logo/logo.png');

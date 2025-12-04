@@ -13,6 +13,7 @@ import BlogPage from "./Page/Blog";
 import ContactPage from "./Page/Contact";
 import SingleServicePage from "./Page/SingleService";
 import SinglePostPage from "./Page/SinglePost";
+import InscriptionPage from "./Page/Inscription";
 
 function AppRouter(){
     return (
@@ -30,6 +31,7 @@ function AppRouter(){
             <Route path="blog" element={<BlogPage />}/>
             <Route path="single_post" element={<SinglePostPage />}/>
             <Route path="contact" element={<ContactPage />}/>
+            <Route path="inscription" element={<InscriptionPage />}/>
             <Route path="404_page" element={<NotFoundPage />}/>
             <Route path="*" element={<NotFoundPage />}/>
         </Routes>
