@@ -19,20 +19,20 @@ function AppRouter(){
     return (
         <Routes>
             <Route path="/" element={<HomePage />}/>
-            <Route path="about" element={<AboutPage />}/>
-            <Route path="service" element={<ServicePage />}/>
-            <Route path="single_services" element={<SingleServicePage />}/>
-            <Route path="case_studies" element={<CaseStudiesPage />}/>
-            <Route path="team" element={<TeamPage />}/>
-            <Route path="partnership" element={<PartnershipPage />}/>      
-            <Route path="pricing" element={<PricingPage />}/>
-            <Route path="Testimonial" element={<TestimonialPage />}/>
-            <Route path="faq" element={<FaqPage />}/>
-            <Route path="blog" element={<BlogPage />}/>
-            <Route path="single_post" element={<SinglePostPage />}/>
-            <Route path="contact" element={<ContactPage />}/>
-            <Route path="inscription" element={<InscriptionPage />}/>
-            <Route path="404_page" element={<NotFoundPage />}/>
+            <Route path="/about" element={<AboutPage />}/>
+            <Route path="/service" element={<ServicePage />}/>
+            <Route path="/single_services" element={<SingleServicePage />}/>
+            <Route path="/case_studies" element={<CaseStudiesPage />}/>
+            <Route path="/team" element={<TeamPage />}/>
+            <Route path="/partnership" element={<PartnershipPage />}/>      
+            <Route path="/pricing" element={<PricingPage />}/>
+            <Route path="/Testimonial" element={<TestimonialPage />}/>
+            <Route path="/faq" element={<FaqPage />}/>
+            <Route path="/blog" element={<BlogPage />}/>
+            <Route path="/single_post" element={<SinglePostPage />}/>
+            <Route path="/contact" element={<ContactPage />}/>
+            <Route path="/inscription" element={<InscriptionPage />}/>
+            <Route path="/404_page" element={<NotFoundPage />}/>
             <Route path="*" element={<NotFoundPage />}/>
         </Routes>
     );
