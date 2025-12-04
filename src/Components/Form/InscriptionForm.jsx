@@ -1272,25 +1272,11 @@ const InscriptionForm = () => {
             justifyContent: "space-between",
             marginTop: "30px"
           }}>
-            {currentSection > 1 && (
-              <button
-                type="button"
-                onClick={prevSection}
-                className="btn btn-secondary"
-                style={{ width: "auto" }}
-              >
-                <span className="btn-title">
-                  <i className="fa-solid fa-arrow-left" style={{ marginRight: "8px" }}></i>
-                  <span>Précédent</span>
-                </span>
-              </button>
-            )}
-
             {currentSection < 5 ? (
               <button
                 type="button"
                 onClick={nextSection}
-                className="btn btn-accent"
+                className="btn btn-accent btn-next-mobile"
                 style={{ width: "auto", marginLeft: currentSection === 1 ? "0" : "auto" }}
               >
                 <span className="btn-title">
@@ -1303,7 +1289,7 @@ const InscriptionForm = () => {
             ) : (
               <button
                 type="submit"
-                className="btn btn-accent"
+                className="btn btn-accent btn-next-mobile"
                 disabled={isSubmitting}
                 style={{ width: "auto", marginLeft: "auto" }}
               >
@@ -1312,6 +1298,20 @@ const InscriptionForm = () => {
                 </span>
                 <span className="icon-circle">
                   <i className="fa-solid fa-check"></i>
+                </span>
+              </button>
+            )}
+
+            {currentSection > 1 && (
+              <button
+                type="button"
+                onClick={prevSection}
+                className="btn btn-secondary btn-prev-mobile"
+                style={{ width: "auto" }}
+              >
+                <span className="btn-title">
+                  <i className="fa-solid fa-arrow-left" style={{ marginRight: "8px" }}></i>
+                  <span>Précédent</span>
                 </span>
               </button>
             )}

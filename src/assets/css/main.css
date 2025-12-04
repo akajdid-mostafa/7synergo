@@ -499,6 +499,37 @@ body.lightmode .form select{
     gap: 15px;
 }
 
+/* Desktop: Previous on left, Next on right */
+@media (min-width: 769px) {
+    .btn-prev-mobile {
+        order: -1; /* Previous button on the left */
+    }
+    
+    .btn-next-mobile {
+        order: 1; /* Next button on the right */
+        margin-left: auto !important;
+    }
+}
+
+/* Mobile: Stack buttons vertically with Next on top, Previous on bottom */
+@media (max-width: 768px) {
+    .form-button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-next-mobile {
+        order: -1; /* Next button appears first (on top) */
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    .btn-prev-mobile {
+        order: 1; /* Previous button appears last (on bottom) */
+        width: 100% !important;
+    }
+}
+
 /* 7.2 Validation Styles */
 
 .error-text {
