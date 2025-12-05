@@ -20,22 +20,22 @@ const TestimonialSection = () => {
                       <div className="testimonial-reviewer">
                         <div className="avatar-container">
                           <img
-                            src="/assets/images/dummy-img-400x400.jpg"
+                            src="/assets/images/victor/ravi1.jpg"
                             alt="Testimonial Reviewer"
                             className="avatar"
                           />
                           <img
-                            src="/assets/images/dummy-img-400x400.jpg"
+                            src="/assets/images/victor/ravi2.jpg"
                             alt="Testimonial Reviewer"
                             className="avatar"
                           />
                           <img
-                            src="/assets/images/dummy-img-400x400.jpg"
+                            src="/assets/images/victor/ravi3.jpg"
                             alt="Testimonial Reviewer"
                             className="avatar"
                           />
                           <img
-                            src="/assets/images/dummy-img-400x400.jpg"
+                            src="/assets/images/victor/ravi4.jpg"
                             alt="Testimonial Reviewer"
                             className="avatar"
                           />

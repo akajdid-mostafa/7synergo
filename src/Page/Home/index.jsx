@@ -13,6 +13,7 @@ import PricingPlanSection from "../../Components/Pricing/Pricing";
 import PartnershipSection from "../../Components/Partnership/Partnership";
 import NewsletterSection from "../../Components/Form/Newsletter";
 import BlogSection from "../../Components/Blog/blog";
+import FaqSection from "../../Components/FAQs/faq";
 
 function HomePage(){
     return(
@@ -29,6 +30,7 @@ function HomePage(){
             <TestimonialSection />
             <DigitalProcessSection />
             <PricingPlanSection />
+            <FaqSection />
             <NewsletterSection />
             {/* <BlogSection /> */}
         </>

@@ -1,7 +1,7 @@
 export const whychooseus = [
     {
         id: 1,
-        icon: "/assets/images/Icon-2.png",
+        icon: "/assets/images/icon/3in1.png",
         title: "Approche 3-en-1 Intégrée",
         content: "Nous combinons Coaching de Vie, Psychologie et Coaching Sportif pour un progrès personnel  et comportemental complet.",
         link: "#",
@@ -10,7 +10,7 @@ export const whychooseus = [
     },
     {
         id: 2,
-        icon: "/assets/images/icon-1.png",
+        icon: "/assets/images/icon/tool.png",
         title: "Outils Métaphoriques",
         content: "Le sport est utilisé pour enseigner des compétences de vie. Discipline, Gestion des émotions et Confiance en soi.",
         link: "#",
@@ -19,7 +19,7 @@ export const whychooseus = [
     },
     {
         id: 3,
-        icon: "/assets/images/Icon-3.png",
+        icon: "/assets/images/icon/focus.png",
         title: "Focus sur la Résilience",
         content: "Notre objectif principal est le renforcement de la résilience mentale, crucial pour les adultes (y compris l'addiction)  et les jeunes.",
         link: "#",

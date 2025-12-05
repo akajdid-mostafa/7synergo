@@ -10,9 +10,9 @@ const FaqSection = () => {
                     <div className="faq-title-container">
                         <div className="sub-heading">
                             <i className="fa-regular fa-circle-dot"></i>
-                            <span>Frequently Asked Questions</span>
+                            <span>Foire Aux Questions</span>
                         </div>
-                        <h2 className="title-heading">Got Questions? We've Got Answers.</h2>
+                        <h2 className="title-heading">Des Questions ? Nous Avons Les Réponses.</h2>
                     </div>
                 </div>
                 <div className="col col-lg-7">

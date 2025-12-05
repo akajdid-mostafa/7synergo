@@ -1,33 +1,33 @@
 export const faqData = [
     {
 		id: 1,
-		question: "What services does Marko offer?",
-		answer: "We specialize in digital marketing, including branding, social media management, content strategy, paid ads, and analytics-driven campaigns.",
+		question: "Quels services le programme Synergie Corps-Esprit propose-t-il ?",
+		answer: "Nous offrons une approche 3-en-1 : Coaching de Vie , Psychologie et Coaching Sportif Intégré pour le développement personnel et la résilience mentale.",
     },
     {
 		id: 2,
-		question: "How long does it take to see results?",
-		answer: "While some channels like paid ads offer quicker results, most strategies (like content and SEO) show steady growth within 3-6 months.",
+		question: "Combien de temps faut-il pour observer des résultats ?",
+		answer: "L'observation des progrès est rapide car la méthode est concrète. Cependant, la résilience durable  et l'ancrage comportemental s'installent sur un programme défini et régulier.",
     },
     {
 		id: 3,
-		question: "Do you work with businesses of all sizes?",
-		answer: "Yes! We collaborate with startups, SMEs, and enterprise-level companies across various industries.",
+		question: "Quels publics accompagnez-vous ?",
+		answer: "Notre public est large : Adultes (y compris addiction) , Adolescents, Enfants , Établissements Scolaires et Clubs Sportifs.",
     },
     {
 		id: 4,
-		question: "Can I request a custom digital marketing package?",
-		answer: "Absolutely. We tailor our services to fit your business goals, budget, and timeline",
+		question: "Puis-je demander un module d'intervention personnalisé ?",
+		answer: "Oui. Nous proposons des modules adaptés et des solutions sur mesure en fonction de l'âge (Primaire, Collège, Lycée) et des besoins spécifiques (performance, gestion d'addiction).",
     },
     {
 		id: 5,
-		question: "How do I know which service is right for me?",
-		answer: "During our initial consultation, we'll assess your current strategy and recommend the best path forward based on data and goals.",
+		question: "Comment choisir le programme qui me convient ?",
+		answer: "Nous commençons toujours par une phase d'évaluation et de consultation , suivie de la clarification des objectifs, pour définir ensemble le plan le plus pertinent.",
     },
     {
 		id: 6,
-		question: "Do you provide monthly performance reports?",
-		answer: "Yes. Every month, you'll receive a clear and comprehensive report outlining progress, key metrics, and next steps.",
+		question: "Fournissez-vous un suivi des progrès ?",
+		answer: "Oui, nous assurons un suivi régulier pour mesurer l'impact de l'approche et garantir le développement durable de la résilience.",
     },
 ];
   
