@@ -164,7 +164,7 @@ return (
 
                         <li className="nav-item">
                             <NavLink to="/contact" className="nav-link">
-                                Contact Us
+                                Contact
                             </NavLink>
                         </li>
                     </ul>
