@@ -314,7 +314,7 @@ const InscriptionForm = () => {
         console.log("✅ Réponse de l'API (succès):", responseData);
         console.log("Status:", response.status);
         setSuccessMessage(true);
-        // Réinitialiser le formulaire après 3 secondes
+        // Réinitialiser le formulaire après 8 secondes (modal se fermera automatiquement)
         setTimeout(() => {
           setFormData({
             nomPrenom: "",
@@ -360,7 +360,7 @@ const InscriptionForm = () => {
           });
           setCurrentSection(1);
           setSuccessMessage(false);
-        }, 3000);
+        }, 8000);
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.error("❌ Erreur API - Status:", response.status);
@@ -412,21 +412,42 @@ const InscriptionForm = () => {
           </div>
         </div>
 
-        {successMessage && (
-          <div className="alert success" style={{ marginBottom: "20px" }}>
-            <span className="check-icon">
-              <i className="fa-solid fa-check"></i>
-            </span>
-            <p className="text-center">Merci ! Votre formulaire a été envoyé avec succès.</p>
-          </div>
-        )}
-
         {errorMessage && (
           <div className="alert error" style={{ marginBottom: "20px" }}>
             <span className="cross-icon">
               <i className="fa-solid fa-xmark"></i>
             </span>
             <p className="text-center">{errorMessage}</p>
+          </div>
+        )}
+
+        {/* Success Modal */}
+        {successMessage && (
+          <div className="newsletter-success-modal-overlay" onClick={() => setSuccessMessage(false)}>
+            <div className="newsletter-success-modal" onClick={(e) => e.stopPropagation()}>
+              <div className="newsletter-success-modal-content">
+                <div className="newsletter-success-icon-wrapper">
+                  <div className="newsletter-success-icon-circle">
+                    <i className="fa-solid fa-check"></i>
+                  </div>
+                  <div className="newsletter-success-icon-checkmark"></div>
+                </div>
+                <h3 className="newsletter-success-title">Inscription Réussie !</h3>
+                <p className="newsletter-success-message">
+                  Merci ! Votre formulaire d'inscription a été envoyé avec succès.
+                </p>
+                <p className="newsletter-success-submessage">
+                  Nous vous contacterons bientôt pour la suite de votre parcours avec 7Synergo.
+                </p>
+                <button
+                  className="newsletter-success-close-btn"
+                  onClick={() => setSuccessMessage(false)}
+                >
+                  <span>Fermer</span>
+                  <i className="fa-solid fa-times"></i>
+                </button>
+              </div>
+            </div>
           </div>
         )}
 

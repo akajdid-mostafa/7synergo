@@ -11,11 +11,11 @@ const ContactSection = () => {
                         <div className="card contact-title">
                             <div className="sub-heading">
                                 <i className="fa-regular fa-circle-dot"></i>
-                                <span>Reach out to us</span>
+                                <span>Contactez-nous</span>
                             </div>
-                            <h2 className="title-heading">Get in Touch</h2>
+                            <h2 className="title-heading">Prenons Contact</h2>
                             <p>
-                            Reach out to us for tailored digital solutions that drive results sollicitudin nec.
+                            Contactez-nous pour des solutions holistiques et personnalisées qui assurent votre progrès durable Corps-Esprit.
                             </p>
                             <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
                                 <div>
@@ -26,8 +26,8 @@ const ContactSection = () => {
                                     </div>
                                 </div>
                                 <div className="d-grid">
-                                    <span>Phone Number</span>
-                                    <h5>+1 (62) 987 7543</h5>
+                                    <span>Numéro de Téléphone</span>
+                                    <h6>+212 6 97 23 23 48</h6>
                                 </div>
                             </div>
                             <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
@@ -39,8 +39,8 @@ const ContactSection = () => {
                                     </div>
                                 </div>
                                 <div className="d-grid">
-                                    <span>Email Address</span>
-                                    <h5>hello@markoagency.com</h5>
+                                    <span>Adresse Email</span>
+                                    <h6>7services.contact@gmail.com</h6>
                                 </div>
                             </div>
                             <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
@@ -52,8 +52,8 @@ const ContactSection = () => {
                                     </div>
                                 </div>
                                 <div className="d-grid">
-                                    <span>Office Address</span>
-                                    <h5>Marko HQ - 902 Digital Lane, San Francisco, CA 94110, USA</h5>
+                                    <span>Adresse de l'Office</span>
+                                    <h6>casablanca, maroc</h6>
                                 </div>
                             </div>
                         </div>
@@ -64,13 +64,13 @@ const ContactSection = () => {
                         <span className="check-icon">
                             <i className="fa-solid fa-2xl fa-check"></i>
                         </span>
-                        <p>Thank you! Form submitted successfully.</p>
+                        <p>Merci ! Votre formulaire a été envoyé avec succès.</p>
                     </div>
                     <div id="error-message" className="alert error hidden">
                         <span className="cross-icon">
                             <i className="fa-solid fa-2xl fa-xmark"></i>
                         </span>
-                        <p>Oops! Form submission failed. Please try again.</p>
+                        <p>Oops! Votre formulaire n'a pas été envoyé. Veuillez réessayer.</p>
                     </div>
                     <ContactForm />
                 </div>

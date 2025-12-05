@@ -7,10 +7,10 @@ import MapsSection from "../../Components/Maps/map";
 function ContactPage(){
     return(
         <>
-            <HeadTitle title="Contact Us - Marko - Digital Marketing Agency" />
-            <BannerInnerSection title="Contact Us" currentPage="Contact Us" />
+            <HeadTitle title="Contactez-nous - Synergie Corps-Esprit" />
+            <BannerInnerSection title="Contactez-nous" currentPage="Contactez-nous" />
             <ContactSection />
-            <MapsSection />
+            {/* <MapsSection /> */}
         </>
     );
 }
