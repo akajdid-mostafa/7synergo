@@ -1,5 +1,5 @@
 /* ======================================================================== */
-/* Marko HTML5 Template */
+/* 7SYNERGO HTML5 Template */
 /* ======================================================================== */
 
 /* ================== Table Of Content ================== */
@@ -1560,6 +1560,7 @@ body.lightmode .digital-process-banner{
 .title-heading-banner{
     display: inline-block;
     -webkit-background-clip: text;
+    background-clip: text;
     background-color: transparent;
     background-image: linear-gradient(340deg, var(--accent-transparent) 10%, var(--accent-color-2) 100%);
     -webkit-text-fill-color: transparent;
@@ -1569,8 +1570,9 @@ body.lightmode .digital-process-banner{
 .title-heading{
      display: inline-block;
     -webkit-background-clip: text;
+    background-clip: text;
     background-color: transparent;
-    background-image: linear-gradient(284deg, var(--accent-transparent) 3%, var(--accent-color-2) 100%);
+    background-image: linear-gradient(284deg, var(--accent-transparent) 0%, var(--accent-color-2) 60%);
     -webkit-text-fill-color: transparent;
     -webkit-tap-highlight-color: transparent;
 }
@@ -4419,7 +4421,7 @@ body.lightmode .newsletter-success-submessage {
     border: 1px solid var(--accent-color-3);
     outline: none;
     border-radius: 15px 15px 15px 15px !important;
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-lg);
     font-weight: 700;
     line-height: var(--line-height-snug);
     position: relative;

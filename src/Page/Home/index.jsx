@@ -18,7 +18,7 @@ import FaqSection from "../../Components/FAQs/faq";
 function HomePage(){
     return(
         <>
-            <HeadTitle title="Home - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Accueil - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerHomeSection />
             <ExpertiseSection />
             {/* <PartnershipSection /> */}

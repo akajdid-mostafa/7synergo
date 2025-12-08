@@ -29,10 +29,10 @@ function ChooseUsAboutSection(){
                                     <div className="d-flex flex-column gspace-2">
                                         <div className="sub-heading">
                                             <i className="fa-regular fa-circle-dot"></i>
-                                            <span>Our Core Values</span>
+                                            <span>Nos Valeurs Fondamentales</span>
                                         </div>
-                                        <h2 className="title-heading">The Principles That Define Us</h2>
-                                        <p className="mb-0">In the fast-paced digital world, choosing the right marketing partner makes all the difference. At Marko, we don’t just create campaigns—we craft strategies that deliver measurable success.</p>
+                                        <h2 className="title-heading">Les Principes Qui Nous Définissent</h2>
+                                        <p className="mb-0">Dans un monde où le bien-être physique et mental est essentiel, choisir le bon partenaire fait toute la différence. Chez Synergo, nous ne créons pas seulement des programmes—nous élaborons des stratégies qui transforment durablement votre vie.</p>
                                     </div>
                                 </AnimateOnScroll>
                                 <div className="image-container">
@@ -44,9 +44,9 @@ function ChooseUsAboutSection(){
                                             <div className="card-chooseus-cta-wrapper">
                                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                                     <div className="card card-chooseus-cta">
-                                                        <h5>Partner with Marko & take your brand to the next level.</h5>
+                                                        <h5>Rejoignez Synergo et transformez votre vie.</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact">Let's Talk Strategy</a>
+                                                            <a href="./contact">Contactez-nous</a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>
                                                     </div>

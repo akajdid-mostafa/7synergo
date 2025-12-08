@@ -2,7 +2,7 @@ export const teamData = [
 	{
 		id: 1,
 		name: "Jordan Lee",
-		title: "Head of Creative",
+		title: "Coach de Vie Certifié",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",
@@ -13,7 +13,7 @@ export const teamData = [
 	{
 		id: 2,
 		name: "Chloe Tan",
-		title: "Senior SEO Specialist",
+		title: "Psychologue Clinicienne",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",
@@ -24,7 +24,7 @@ export const teamData = [
 	{
 		id: 3,
 		name: "Daniel Cruz",
-		title: "Performance Marketing Lead",
+		title: "Coach Sportif Professionnel",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",
@@ -35,7 +35,7 @@ export const teamData = [
 	{
 		id: 4,
 		name: "Olivia Bennett",
-		title: "Creative Director",
+		title: "Directrice du Programme",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",
@@ -46,7 +46,7 @@ export const teamData = [
 	{
 		id: 5,
 		name: "Daniel White",
-		title: "Client Success Manager",
+		title: "Responsable Relations Clients",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",
@@ -57,7 +57,7 @@ export const teamData = [
 	{
 		id: 6,
 		name: "Chloe Ramirez",
-		title: "Social Media Manager",
+		title: "Coach Karaté & Self-Défense",
 		image: "/assets/images/dummy-img-600x800.jpg",
 		socials: {
 		facebook: "https://facebook.com",

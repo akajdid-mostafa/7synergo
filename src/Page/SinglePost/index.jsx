@@ -6,7 +6,7 @@ import BlogPostSection from "../../Components/Blog/SinglePost";
 function SinglePostPage(){
     return(
         <>
-            <HeadTitle title="Single Post - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Article - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerInnerSection title="Growth Strategies for Digital Businesse" currentPage="Single Post" />
             <BlogPostSection />
 

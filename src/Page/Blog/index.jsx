@@ -6,7 +6,7 @@ import BlogSection from "../../Components/Blog/blog";
 function BlogPage(){
     return(
         <>
-            <HeadTitle title="Blog - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Blog - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerInnerSection title="Our Blog" currentPage="Blog" />
             <BlogSection />            
         </>

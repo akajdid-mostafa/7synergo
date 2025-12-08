@@ -9,8 +9,8 @@ import SingleServiceSection from "../../Components/Services/singleservice";
 function SingleServicePage(){
     return(
         <>
-            <HeadTitle title="Single Service - Marko - Digital Marketing Agency" />
-            <BannerInnerSection title="Social Media Marketing" currentPage="Services Details" />
+            <HeadTitle title="Détails du Service - 7Synergo - Coaching de Vie, Psychologie & Sport" />
+            <BannerInnerSection title="Programme Intégré de Coaching" currentPage="Détails du Service" />
             <SingleServiceSection />
             <TestimonialSection />
             <NewsletterSection />

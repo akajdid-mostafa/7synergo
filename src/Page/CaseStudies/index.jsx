@@ -9,7 +9,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function CaseStudiesPage(){
     return(
         <>
-            <HeadTitle title="Case Studies - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Études de Cas - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerInnerSection title="Case Studies" currentPage="Case Studies"/>
             <CaseStudiesSection />
             <GuideBannerSection />

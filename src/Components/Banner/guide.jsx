@@ -12,11 +12,11 @@ function GuideBannerSection(){
                             <div className="guide-content">
                                 <div className="guide-video-container">
                                     <VideoButton videoUrl="https://www.youtube.com/watch?v=LAteUqIJBLY&pp=ygUPZml0bmVzcyBzZW5lcmd5?autoplay=1" />
-                                    <p>See How We Help Brands Grow</p>
+                                    <p>Découvrez Comment Nous Transformons des Vies</p>
                                 </div>
                                 <div className="d-flex flex-column gspace-2">
-                                    <h3 className="title-heading">Transform Your Business with Marko!</h3>
-                                    <p>Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!</p>
+                                    <h3 className="title-heading">Transformez Votre Vie avec Synergo !</h3>
+                                    <p>Découvrez notre programme innovant qui fusionne coaching de vie, psychologie et coaching sportif. Rejoignez-nous pour une transformation complète et durable !</p>
                                 </div>
                             </div>
                         </AnimateOnScroll>

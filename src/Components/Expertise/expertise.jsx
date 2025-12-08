@@ -86,7 +86,7 @@ function ExpertiseSection() {
                       </a>
                     </li>
                     {/* <li>
-                      <a href="./single_services">Brand Strategy</a>
+                      <a href="./single_services">Stratégie de Transformation</a>
                     </li>
                     <li>
                       <a href="./single_services">Conversion Optimization</a>

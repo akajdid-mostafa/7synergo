@@ -15,9 +15,9 @@ function BlogSection() {
                                     className="d-flex flex-column gspace-2">
                                     <div className="sub-heading">
                                         <i className="fa-regular fa-circle-dot"></i>
-                                        <span>Insights & Trends</span>
+                                        <span>Conseils & Actualités</span>
                                     </div>
-                                    <h2 className="title-heading">Latest Digital Marketing Strategies & Tips</h2>
+                                    <h2 className="title-heading">Derniers Articles sur le Coaching & le Bien-être</h2>
                                 </div>
                             </AnimateOnScroll>
                         </div>
@@ -26,12 +26,12 @@ function BlogSection() {
                                 <div
                                     className="d-flex flex-column gspace-2 justify-content-end h-100">
                                     <p>
-                                        Explore our latest blog articles covering industry trends,
-                                        expert insights, and actionable strategies to elevate your
-                                        digital marketing game.
+                                        Découvrez nos derniers articles sur le coaching de vie, la psychologie,
+                                        le sport et le bien-être. Des conseils pratiques et des stratégies
+                                        pour améliorer votre qualité de vie.
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="./blog">View All Articles</a>
+                                        <a href="./blog">Voir Tous les Articles</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

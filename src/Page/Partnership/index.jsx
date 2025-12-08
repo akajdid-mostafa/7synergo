@@ -9,7 +9,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function PartnershipPage(){
     return(
         <>
-            <HeadTitle title="Partnership - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Partenariats - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerInnerSection title="Partnership" currentPage="Partnership"/>
             <PartnershipListSection />
             <GuideBannerSection />

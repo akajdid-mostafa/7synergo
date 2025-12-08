@@ -15,8 +15,8 @@ import NewsletterSection from "../../Components/Form/Newsletter";
 function AboutPage(){
     return(
         <>
-            <HeadTitle title="About - Marko - Digital Marketing Agency"/>
-            <BannerInnerSection title="About Marko" currentPage="About Us" />
+            <HeadTitle title="À Propos - 7Synergo - Coaching de Vie, Psychologie & Sport"/>
+            <BannerInnerSection title="À Propos de Synergo" currentPage="À Propos" />
             <AboutSection />
             <ChooseUsSection />
             {/* <PartnershipSection /> */}

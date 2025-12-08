@@ -21,16 +21,16 @@ const SingleServiceSection = () => {
                                         <AnimateOnScroll animation="fadeInRight" speed="slow">
                                             <div className="sub-heading">
                                                 <i className="fa-regular fa-circle-dot"></i>
-                                                <span>Our Expertise</span>
+                                                <span>Notre Expertise</span>
                                             </div>
                                         </AnimateOnScroll>
                                         <AnimateOnScroll animation="fadeInRight" speed="normal">
                                             <h3 className="title-heading">
-                                                Boost Your Brand with Strategic Social Media Marketing
+                                                Programme Intégré de Coaching de Vie, Psychologie & Sport
                                             </h3>
                                         </AnimateOnScroll>
                                         <p>
-                                            Maximize engagement, build loyal communities, and drive conversions across all major platforms lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            Transformez votre vie avec notre approche holistique qui combine coaching de vie, psychologie et coaching sportif. Un programme personnalisé pour atteindre vos objectifs physiques, mentaux et émotionnels de manière durable.
                                         </p>
                                     </div>
                                 </div>
@@ -42,9 +42,9 @@ const SingleServiceSection = () => {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                         <div className="col col-lg-8">
                             <div className="d-flex flex-column gspace-2">
-                                <h4>Overview</h4>
+                                <h4>Vue d'Ensemble</h4>
                                 <p>
-                                    At Marko, we help brands grow through custom-tailored social media marketing strategies that connect with your audience. From content creation to campaign optimization, we make sure your presence on platforms like Instagram, Facebook, LinkedIn, and TikTok stands out. Whether you’re launching a new brand or scaling an existing one, our experts turn social media into a powerful growth engine.
+                                    Chez Synergo, nous vous accompagnons dans votre transformation personnelle grâce à un programme intégré qui fusionne le coaching de vie, la psychologie et le coaching sportif. Notre approche personnalisée s'adapte à vos besoins spécifiques, que vous souhaitiez améliorer votre condition physique, surmonter des défis personnels, ou développer votre confiance en vous. Nos experts travaillent ensemble pour créer une synergie puissante qui transforme votre vie de manière durable.
                                 </p>
                                 <div className="row row-cols-md-2 row-cols-1 grid-spacer-2 grid-spacer-md-3">
                                     <div className="col">
@@ -68,33 +68,34 @@ const SingleServiceSection = () => {
                                 </div>
 
                                 <div className="card service-included">
-                                    <h4>What's Included</h4>
+                                    <h4>Ce Qui Est Inclus</h4>
                                     <div className="underline-accent-short"></div>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis ac odio et efficitur. Proin velit neque, sollicitudin nec purus eu, suscipit feugiat tellus.
+                                        Notre programme complet inclut un accompagnement personnalisé dans trois domaines complémentaires pour une transformation holistique de votre vie.
                                     </p>
                                     <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
                                         <div className="col">
                                             <ul className="check-list">
-                                                <li>Platform Strategy & Planning</li>
-                                                <li>Creative Content Production</li>
-                                                <li>Paid Ads Management</li>
-                                                <li>Community engagement</li>
+                                                <li>Coaching de Vie Personnalisé</li>
+                                                <li>Accompagnement Psychologique</li>
+                                                <li>Programme Sportif Sur Mesure</li>
+                                                <li>Suivi et Évaluation Régulière</li>
                                             </ul>
                                         </div>
                                         <div className="col">
                                             <ul className="check-list">
-                                                <li>Perfomance Reporting & Analytics</li>
-                                                <li>Influencer Collaborations</li>
-                                                <li>Social Listening & Trend Monitoring</li>
+                                                <li>Stratégies de Motivation</li>
+                                                <li>Gestion du Stress et des Émotions</li>
+                                                <li>Définition d'Objectifs Clairs</li>
+                                                <li>Support Continu et Disponible</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
-                                <h4>Why Choose Marko for Social Media Marketing?</h4>
+                                <h4>Pourquoi Choisir Synergo pour Votre Transformation?</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis ac odio et efficitur. Proin velit neque, sollicitudin nec purus eu, suscipit feugiat tellus.
+                                    Synergo combine l'expertise en coaching de vie, psychologie et coaching sportif pour offrir une approche holistique unique. Notre programme intégré vous accompagne dans votre transformation personnelle et physique avec un suivi personnalisé et des résultats durables.
                                 </p>
 
                                 <div className="row row-cols-2">
@@ -103,15 +104,15 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Result-Driven Campaigns</h5>
-                                                    <p>Focused on reach, engagement, and ROI</p>
+                                                    <h5>Résultats Mesurables</h5>
+                                                    <p>Objectifs clairs et suivi de progression</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Dedicated Team</h5>
-                                                    <p>Experts in every platform you use</p>
+                                                    <h5>Équipe Dédiée</h5>
+                                                    <p>Experts en coaching, psychologie et sport</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -121,15 +122,15 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Tailored strategies</h5>
-                                                    <p>No one-size-fits-all, we build for your brand</p>
+                                                    <h5>Approche Personnalisée</h5>
+                                                    <p>Programme sur mesure adapté à vos besoins</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>Analytics & insights</h5>
-                                                    <p>Make smart decision with real data</p>
+                                                    <h5>Suivi & Analyse</h5>
+                                                    <p>Évaluation continue pour des résultats durables</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -140,7 +141,7 @@ const SingleServiceSection = () => {
                         <div className="col col-lg-4">
                             <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-5">
                                 <div className="card service-recent">
-                                <h4>Recent Services</h4>
+                                <h4>Services Récents</h4>
                                 <div className="underline-accent-short"></div>
                                 <ul className="single-service-list">
                                     {services.map((service) => (
@@ -154,12 +155,12 @@ const SingleServiceSection = () => {
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
-                                    <h3 className="title-heading">Transform Your Business with Marko!</h3>
+                                    <h3 className="title-heading">Transformez Votre Vie avec Synergo !</h3>
                                     <p>
-                                        Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!
+                                        Découvrez notre programme innovant qui fusionne coaching de vie, psychologie et coaching sportif. Rejoignez-nous pour une transformation complète et durable !
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="about">Read More</a>
+                                        <a href="about">En Savoir Plus</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

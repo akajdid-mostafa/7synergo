@@ -8,7 +8,7 @@ import TeamExtendSection from "../../Components/Team/TeamExtend";
 function TeamPage(){
     return(
         <>
-            <HeadTitle title="Our Team - Marko - Digital Marketing Agency" />
+            <HeadTitle title="Notre Équipe - 7Synergo - Coaching de Vie, Psychologie & Sport" />
             <BannerInnerSection title="Meet Our Team" currentPage="Our Team"/>
             <TeamExtendSection />
             <PartnershipSection />

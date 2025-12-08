@@ -9,7 +9,7 @@ const BlogPostSection = () => {
                 <div className="col col-lg-4 order-2 order-lg-1">
                     <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
                         <div className="card recent-post">
-                            <h4>Recent Blog</h4>
+                            <h4>Articles Récents</h4>
                             {blogs.map((blog) => (
                                 <div
                                     className="d-flex flex-row w-100 gspace-1"
@@ -36,12 +36,12 @@ const BlogPostSection = () => {
                         </div>
                         <div className="cta-service-banner">
                             <div className="spacer"></div>
-                            <h3 className="title-heading">Transform Your Business with Marko!</h3>
+                            <h3 className="title-heading">Transformez Votre Vie avec Synergo !</h3>
                             <p>
-                                Take your digital marketing to the next level with data-driven strategies and innovative solutions. Let's create something amazing together!
+                                Découvrez notre programme innovant qui fusionne coaching de vie, psychologie et coaching sportif. Rejoignez-nous pour une transformation complète et durable !
                             </p>
                             <div className="link-wrapper">
-                                <a href="about">Read More</a>
+                                <a href="about">En Savoir Plus</a>
                                 <i className="fa-solid fa-circle-arrow-right"></i>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ const BlogPostSection = () => {
                             className="img-fluid"
                             />
                         </div>
-                        <h3>How to Grow Your Digital Business</h3>
+                        <h3>Comment Transformer Votre Vie avec le Coaching Intégré</h3>
                         <div className="underline-muted-full"></div>
                         <div className="d-flex flex-row align-items-center justify-content-between">
                             <div className="d-flex flex-row align-items-center gspace-2">
@@ -66,30 +66,27 @@ const BlogPostSection = () => {
                                 </div>
                                 <div className="d-flex flex-row gspace-1 align-items-center">
                                     <i className="fa-solid fa-folder accent-color"></i>
-                                    <span className="meta-data-post">SEO</span>
+                                    <span className="meta-data-post">Coaching</span>
                                 </div>
                             </div>
                             <div className="d-flex flex-row gspace-1 align-items-center">
                                 <i className="fa-solid fa-user accent-color"></i>
-                                <span className="meta-data">Fox Creation</span>
+                                <span className="meta-data">Synergo</span>
                             </div>
                         </div>
 
                     <div>
                         <p>
-                            In today's fast-paced digital landscape, growing a business online requires more than just a website and a few ads.
-                            To achieve sustainable growth, digital businesses must implement a well-rounded strategy that includes brand positioning,
-                            performance marketing, and customer retention. In this post, we'll explore actionable growth strategies to help your digital
-                            business scale successfully.
+                            Dans le monde d'aujourd'hui, transformer sa vie nécessite une approche holistique qui combine le bien-être physique,
+                            mental et émotionnel. Le programme Synergo fusionne le coaching de vie, la psychologie et le coaching sportif pour
+                            offrir une solution complète. Dans cet article, nous explorons comment cette approche intégrée peut vous aider à
+                            atteindre vos objectifs personnels et professionnels de manière durable.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis ac odio et efficitur. Proin velit neque, sollicitudin
-                            nec purus eu, suscipit feugiat tellus. Mauris non iaculis nulla. Curabitur placerat nulla sodales, consequat nunc nec, consectetur
-                            ante. Aenean et enim eu orci dapibus maximus ut non ex. Sed eu pharetra orci, sed consequat nisi. Praesent porta ipsum id erat
-                            interdum, eleifend bibendum enim sodales. In ut nisl blandit, molestie enim sit amet, ultricies ipsum. Nunc eu sapien leo.
-                            Nullam a tristique lacus, sit amet fringilla turpis. Pellentesque tempor, diam sed consectetur fermentum, leo turpis lobortis mi,
-                            eu gravida lorem mauris ut est. Donec pellentesque nisl vel purus condimentum posuere. Nulla laoreet arcu non convallis lobortis.
-                            Aenean in lacus nec magna tincidunt faucibus vel sit amet risus.
+                            Le coaching de vie vous accompagne dans la clarification de vos objectifs et la mise en place d'actions concrètes.
+                            La psychologie vous aide à comprendre et surmonter les blocages mentaux et émotionnels. Le coaching sportif renforce
+                            votre corps et votre confiance en vous. Ensemble, ces trois piliers créent une synergie puissante qui transforme
+                            non seulement votre apparence physique, mais aussi votre état d'esprit et votre qualité de vie globale.
                         </p>
                     </div>
                     <div className="quote-container">
@@ -101,19 +98,20 @@ const BlogPostSection = () => {
                         </div>
                         </div>
                         <p className="quote">
-                            Nam finibus diam non orci lobortis volutpat. In non odio in enim scelerisque finibus. Praesent mattis accumsan metus ut ultrices.
-                            Quisque tortor dui, facilisis at pharetra non, tincidunt a sem. quam diam. Morbi lobortis massa id porta maximus.
+                            Le programme Synergo a complètement transformé ma vie. Grâce à l'approche intégrée du coaching de vie, de la psychologie
+                            et du sport, j'ai non seulement atteint mes objectifs physiques, mais j'ai aussi développé une confiance en moi et
+                            une meilleure compréhension de mes besoins profonds.
                         </p>
                         <div>
-                        <h5>Adam Malik</h5>
-                        <p className="quote-description">User Malik</p>
+                        <h5>Marie Dubois</h5>
+                        <p className="quote-description">Participante Synergo</p>
                         </div>
                     </div>
                     <p>
-                        Pellentesque ac velit libero. Phasellus sed elit sit amet diam ultricies dapibus. Curabitur pretium, eros ut posuere finibus, sem
-                        mauris accumsan nulla, nec elementum metus turpis at nibh. Phasellus commodo lobortis semper. Fusce velit augue, efficitur id elit
-                        ut, volutpat feugiat est. Cras ac mi orci. Maecenas nibh neque, faucibus sed lacus nec, elementum tempor dui. Fusce porta nunc vitae
-                        finibus dapibus. In vulputate nisl id mollis fringilla.
+                        Que vous souhaitiez améliorer votre condition physique, surmonter des défis personnels, ou simplement vivre une vie plus équilibrée,
+                        le programme Synergo s'adapte à vos besoins spécifiques. Nos experts en coaching de vie, psychologie et sport travaillent ensemble
+                        pour créer un plan personnalisé qui respecte votre rythme et vos objectifs. Rejoignez-nous et découvrez comment transformer votre vie
+                        de manière durable et significative.
                     </p>
                     </div>
                 </div>

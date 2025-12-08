@@ -16,7 +16,7 @@ const PartnershipSection = () => {
                         <div className="row row-cols-lg-2 row-cols-1 align-items-center px-5 position-relative z-2">
                             <div className="col">
                                 <div className="d-flex flex-column justify-content-start pe-lg-3 pe-0">
-                                    <h3 className="title-heading">Powering Success for Top Brands</h3>
+                                    <h3 className="title-heading">Accompagnement vers le Succès et le Bien-être</h3>
                                 </div>
                             </div>
                             <div className="col">
